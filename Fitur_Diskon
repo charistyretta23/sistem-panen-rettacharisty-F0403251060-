@@ -1,0 +1,74 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPCXsCTSFFGOwUl2nIeEzlu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/charistyretta23/sistem-panen-rettacharisty-F0403251060-/blob/fitur-diskon/Fitur_Diskon\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ufFcDwT7doUd",
+        "outputId": "2506dbf3-4f27-412e-de5c-4853de59038c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total hasil panen: Rp 500000\n",
+            "Diskon: 10 %\n",
+            "Total setelah diskon: Rp 450000.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "def hitung_diskon(total, persen_diskon):\n",
+        "    diskon = total * persen_diskon / 100\n",
+        "    total_setelah_diskon = total - diskon\n",
+        "    return total_setelah_diskon\n",
+        "\n",
+        "\n",
+        "# Data hasil panen\n",
+        "hasil_panen = 100\n",
+        "harga_per_kg = 5000\n",
+        "persen_diskon = 10\n",
+        "\n",
+        "# Menghitung total\n",
+        "total = hasil_panen * harga_per_kg\n",
+        "\n",
+        "# Menghitung total setelah diskon\n",
+        "total_akhir = hitung_diskon(total, persen_diskon)\n",
+        "\n",
+        "print(\"Total hasil panen: Rp\", total)\n",
+        "print(\"Diskon:\", persen_diskon, \"%\")\n",
+        "print(\"Total setelah diskon: Rp\", total_akhir)"
+      ]
+    }
+  ]
+}
